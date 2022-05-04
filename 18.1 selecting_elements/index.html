@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" / >
+    <meta
+      name="viewport"
+      content="width=device-width,
+initial-scale=1.0"
+    />
+    <title>Document</title>
+  </head>
+  <body>
+    <h1>Header</h1>
+    <p>Paragraph</p>
+    <a href="#">link</a>
+    <img src="" alt="" />
+    <div class="x">Div with a class</div>
+    <div id="y">Div with an id</div>
+    <input type="text" />
+    <input type="text" />
+    <input type="text" />
+  </body>
+  <script>
+    // inside the script tag do the following:
+    // Select all elements inside the body and store each element
+    // in a separate variable and print them to the console.
+    // 1. Select all elements not using the querySelector method.
+    const everythingById = document.getElementsByTagName("body");
+
+    const h1 = document.getElementsByTagName("h1");
+    const p = document.getElementsByTagName("p");
+    const a = document.getElementsByTagName("a");
+    const img = document.getElementsByTagName("img");
+    const div = document.getElementsByTagName("div");
+    const inputs = document.getElementsByTagName("input");
+    const input1 = inputs[0];
+    const input2 = inputs[1];
+    const input3 = inputs[2];
+
+    // 2. using querySelector
+    const h1Query = document.querySelector("h1");
+    const pQuery = document.querySelector("p");
+    const aQuery = document.querySelector("a");
+    const imgQuery = document.querySelector("img");
+    const divQuery = document.querySelectorAll("div");
+    const inputsQuery = document.querySelectorAll("input");
+    const input1Query = inputsQuery[0];
+    const input2Query = inputsQuery[1];
+    const input3Query = inputsQuery[2];
+    const everythingQuery = document.querySelector("body");
+    console.log(everythingQuery);
+    // 3. Select all inputs and iterate over them with the forEach
+    // method and print each one to the console. Using both
+    // querySelectorAll and getElementsByTagName.
+
+    const Input = document.querySelectorAll("input");
+    Input.forEach((input) => {
+      console.dir(input);
+    });
+    const Input2 = document.getElementsByTagName("input");
+    Input.forEach((input) => {
+      console.dir(input);
+    });
+  </script>
+</html>
