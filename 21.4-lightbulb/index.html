@@ -1,0 +1,77 @@
+<!-- <!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      #off {
+        visibility: visible;
+      }
+      #on {
+        visibility: hidden;
+      }
+    </style>
+  </head>
+  <body>
+    <img src="./on.jpeg" alt="light on" id="on" onclick="myFunction()" />
+    <img src="./off.jpeg" alt="light off" id="off" onclick="myFunction()" />
+    <script>
+      function myFunction() {
+        const imgOn = document.querySelector("#on");
+        const imgOff = document.querySelector("#off");
+
+        if (imgOn.style.visibility === "hidden") {
+          imgOff.style.visibility === "visible";
+        } else {
+          imgOff.style.visibility === "hidden";
+        }
+      }
+    </script>
+  </body>
+</html> -->
+
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <style>
+      body {
+        min-height: 100vh;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+      }
+      img {
+        height: 400px;
+        width: 400px;
+      }
+    </style>
+    <img
+      class="light-bulb"
+      onclick="lightBulbFunc()"
+      src="https://cdn2.iconfinder.com/data/icons/web-technology-outline/100/outline_light_off_lamp-512.png"
+      alt="light-bulb-off"
+    />
+  </body>
+  <script>
+    const lightBulbFunc = () => {
+      const img = document.querySelector(".light-bulb");
+      if (
+        img.src ===
+        "https://cdn2.iconfinder.com/data/icons/web-technology-outline/100/outline_light_off_lamp-512.png"
+      ) {
+        img.src =
+          "https://cdn2.iconfinder.com/data/icons/web-technology-colors/100/color_light_off_lamp-512.png";
+      } else {
+        img.src =
+          "https://cdn2.iconfinder.com/data/icons/web-technology-outline/100/outline_light_off_lamp-512.png";
+      }
+    };
+  </script>
+</html>
