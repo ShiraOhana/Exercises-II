@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <!-- <Create a webpage that has some text and two buttons with ‘+’ and ‘-‘
+Clicking the ‘+’ button should increase the text’s font-size and clicking the ‘-‘
+should decrease it.
+Limit the font size to be between 6px and 100px. -->
+
+    <button class="min">-</button>
+    <p>You can change my size</p>
+    <button class="max">+</button>
+
+    <script>
+      let min = document.querySelector(".min");
+      let max = document.querySelector(".max");
+      let p = document.querySelector("p");
+
+      min.addEventListener("click", (event) => {
+        const style = getComputedStyle(p).getPropertyValue("font-size");
+        const currentSize = parseFloat(style);
+        if (currentSize < 100) {
+          p.style.fontSize = currentSize - 5 + "px";
+        }
+      });
+      max.addEventListener("click", (event) => {
+        const style = getComputedStyle(p).getPropertyValue("font-size");
+        const currentSize = parseFloat(style);
+        if (currentSize > 6) {
+          p.style.fontSize = currentSize + 5 + "px";
+        }
+      });
+    </script>
+  </body>
+</html>
