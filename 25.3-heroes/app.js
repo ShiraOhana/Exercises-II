@@ -9,5 +9,8 @@ function printName() {
   console.log(`my name is ${this.name}`);
 }
 function printHeroes(heroes, printFunc) {
-  printName.bind();
+  heroes.forEach(function (hero) {
+    printFunc.call(hero);
+  });
 }
+printHeroes(superHeroes, printName);
