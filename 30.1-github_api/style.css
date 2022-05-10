@@ -1,4 +1,27 @@
 body {
   margin: 0 auto;
   text-align: center;
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  background-color: aliceblue;
+}
+button {
+  padding: 10px 15px;
+  color: #fff;
+  background-color: rgb(223, 79, 103);
+  border: 1px solid rgb(185, 20, 47);
+}
+button:hover {
+  cursor: pointer;
+  background-color: rgb(172, 47, 68);
+  transition: all 500ms ease-in-out;
+}
+input {
+  padding: 10px;
+  margin: 10px;
+  color: rgb(185, 20, 47);
+}
+.user-name,
+.num-of-repo {
+  color: rgb(185, 20, 47);
+  font-size: 20px;
 }

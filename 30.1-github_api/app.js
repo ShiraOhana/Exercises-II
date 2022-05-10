@@ -16,8 +16,20 @@ const getUser = async () => {
     link.href = data.html_url;
     user.textContent = `Username: ${data.login}`;
     repo.textContent = `Number of public repo: ${data.public_repos}`;
+    if (data.message === "Not Found") {
+      user.textContent = `User doesn't exist, try with a different spelling :)`;
+      repo.textContent = undefined;
+      avatar = undefined;
+      link.href = undefined;
+    }
   } catch (e) {
     console.log(e);
   }
 };
 btn.addEventListener("click", getUser);
+btn.addEventListener("keypress", (event) => {
+  if (event.keyCode === 13) {
+    event.preventDefault();
+    getUser();
+  }
+});
