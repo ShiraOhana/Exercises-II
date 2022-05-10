@@ -13,7 +13,8 @@ const getUser = async () => {
     const data = await response.json();
     console.log(data);
     avatar.src = data.avatar_url;
-    link.href = data.user.textContent = `Username: ${data.login}`;
+    link.href = data.html_url;
+    user.textContent = `Username: ${data.login}`;
     repo.textContent = `Number of public repo: ${data.public_repos}`;
   } catch (e) {
     console.log(e);
